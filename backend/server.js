@@ -16,7 +16,8 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://quiz-makerapp.netlify.app'],
+    'https://quiz-maker-tcrm.onrender.com'
+  ],
   credentials: true
 }));
 
