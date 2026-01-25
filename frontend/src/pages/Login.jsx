@@ -86,7 +86,7 @@ const Login = () => {
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors" size={16} />
                 <input 
-                  type="email" required placeholder="naina@example.com"
+                  type="email" required placeholder="@gmail.com"
                   className="w-full pl-11 pr-4 py-3 bg-slate-50 border-2 border-transparent rounded-xl outline-none focus:bg-white focus:border-blue-100 focus:ring-4 focus:ring-blue-50/50 transition-all font-semibold text-slate-700 text-sm placeholder:text-slate-300"
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
