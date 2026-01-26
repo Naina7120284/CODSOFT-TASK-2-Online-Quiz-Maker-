@@ -87,7 +87,7 @@ const handleConfirmDeleteQuiz = async () => {
         )}
           </div>
           
-          <div className="hidden md:block relative">
+          <div className="block relative mt-8 lg:mt-0">
             <div className="w-[380px] h-[260px] bg-blue-50 rounded-[2rem] border border-blue-100 flex items-center justify-center p-6 overflow-hidden">
                <img 
                 src="https://illustrations.popsy.co/amber/web-design.svg" 
