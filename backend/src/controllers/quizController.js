@@ -26,7 +26,6 @@ exports.getQuizzes = async (req, res) => {
   }
 };
 
-
 exports.getQuizById = async (req, res) => {
   try {
     const quiz = await Quiz.findById(req.params.id);

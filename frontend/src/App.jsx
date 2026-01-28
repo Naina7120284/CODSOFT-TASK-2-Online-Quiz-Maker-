@@ -12,9 +12,13 @@ import MyQuizzes from './pages/MyQuizzes';
 import Reports from './pages/Reports';
 import Help from './pages/Help';
 
-function App() {
-  
+const AdminWrapper = () => {
   const user = JSON.parse(localStorage.getItem('user'));
+  return user?.role === 'admin' ? <EditQuiz /> : <Navigate to="/" />;
+};
+
+function App() {
+   const user = JSON.parse(localStorage.getItem('user'));
 
   return (
      <Router>
@@ -27,10 +31,9 @@ function App() {
         <Route path="/reports" element={<Reports />} />
         <Route path="/help" element={<Help />} />
         <Route path="/create-quiz" element={<CreateQuiz />} />
-
         <Route path="/edit/:id" element={
           <ProtectedRoute>
-            {user?.role === 'admin' ? <EditQuiz /> : <Navigate to="/" />}
+            <AdminWrapper />
           </ProtectedRoute>
         } />
         <Route path="/take-quiz/:id" element={<TakeQuiz />} />
